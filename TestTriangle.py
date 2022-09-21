@@ -25,6 +25,12 @@ class TestTriangles(unittest.TestCase):
         
     def testEquilateralTriangles(self): 
         self.assertEqual(classifyTriangle(1,1,1),'Equilateral','1,1,1 should be equilateral')
+    
+    def testRightTriangleA1(self):
+        self.assertEqual(classifyTriangle(5,12,13),'Right','5,12,13 is a Right triangle')
+    
+    def testInvalidInput(self):
+        self.assertEqual(classifyTriangle(3,4,5),'InvalidInput','Buggy logic of b<=b is giving out InvalidInput')
 
 if __name__ == '__main__':
     print('Running unit tests')
