@@ -7,4 +7,4 @@ The objective of this assignment is to
 (c) report on your testing results for the Triangle problem
 
 
-[![rpalival](https://circleci.com/gh/rpalival/567_HW_02a_TestTriangle.svg?style=shield&circle-token=fab963459f0aceb183b3920fff6c29440fe0f8c9)](https://app.circleci.com/pipelines/github/<rpalival>/<567_HW_02a_TestTriangle>?branch=main&filter=all)
+[![rpalival](https://circleci.com/gh/rpalival/567_HW_02a_TestTriangle.svg?style=svg&circle-token=fab963459f0aceb183b3920fff6c29440fe0f8c9)](https://app.circleci.com/pipelines/github/<rpalival>/<567_HW_02a_TestTriangle>?branch=main&filter=all)
