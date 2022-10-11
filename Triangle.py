@@ -29,29 +29,29 @@ def classify_triangle(a_side,b_side,c_side):
 
     # require that the input values be >= 0 and <= 200
     if a_side > 200 or b_side > 200 or c_side > 200:
-        output = 'InvalidInput'
+        return 'InvalidInput'
 
     if a_side < 0 or b_side < 0 or c_side < 0: #Defect 1 Fixed
-        output = 'InvalidInput'
+        return 'InvalidInput'
 
     # verify that all 3 inputs are integers
     # Python's "isinstance(object,type) returns True if the object is of the specified type
     if not(isinstance(a_side,int) and isinstance(b_side,int) and isinstance(c_side,int)):
-        output = 'InvalidInput'
+        return 'InvalidInput'
 
     # This information was not in the requirements spec but
     # is important for correctness
     # the sum of any two sides must be strictly less than the third side
     # of the specified shape is not a triangle
     if (a_side > (b_side + c_side)) or (b_side > (a_side + c_side)) or (c_side > (a_side + b_side)): #Defect 2 Fixed
-        output = 'NotATriangle'
+        return 'NotATriangle'
 
     # now we know that we have a valid triangle
     if a_side == b_side and b_side == c_side: #Defect 3 Fixed
         output = 'Equilateral'
-    if ((a_side * a_side) + (b_side * b_side)) == (c_side * c_side):
+    elif ((a_side * a_side) + (b_side * b_side)) == (c_side * c_side):
         output = 'Right'
-    if (a_side == b_side) or  (b_side == c_side) or (a_side == c_side): #Defect 4 Fixed
+    elif (a_side == b_side) or  (b_side == c_side) or (a_side == c_side): #Defect 4 Fixed
         output = 'Isoceles'
     else:
         output = 'Scalene'
