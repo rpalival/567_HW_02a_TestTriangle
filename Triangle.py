@@ -43,7 +43,9 @@ def classify_triangle(a_side,b_side,c_side):
     # is important for correctness
     # the sum of any two sides must be strictly less than the third side
     # of the specified shape is not a triangle
-    if (a_side > (b_side + c_side)) or (b_side > (a_side + c_side)) or (c_side > (a_side + b_side)): #Defect 2 Fixed
+    if ((a_side > (b_side + c_side)) or
+        (b_side > (a_side + c_side)) or
+        (c_side > (a_side + b_side))):
         return 'NotATriangle'
 
     # now we know that we have a valid triangle
