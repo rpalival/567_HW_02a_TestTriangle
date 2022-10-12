@@ -32,6 +32,19 @@ class TestTriangles(unittest.TestCase):
     def testInvalidInput(self):
         self.assertEqual(classify_triangle(3,4,8),'NotATriangle','3,4,8 is not a triangle')
 
+    def testInvalidInput1(self):
+        self.assertEqual(classify_triangle(201,4,6),'InvalidInput','a_side is > 200')
+
+    def testInvalidInput2(self):
+        self.assertEqual(classify_triangle(3,-4,6),'InvalidInput','b_side is < 0')
+
+    def testInvalidInput3(self):
+        self.assertEqual(classify_triangle(3,4,89.9),'InvalidInput','c_side is not integer')
+    
+    def testIsocelesTriangle(self):
+        self.assertEqual(classify_triangle(4,4,6),'Isoceles','a_side is equal to b_side')
+
+
 if __name__ == '__main__':
     print('Running unit tests')
     unittest.main()

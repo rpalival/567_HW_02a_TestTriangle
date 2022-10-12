@@ -8,7 +8,6 @@ The primary goal of this file is to demonstrate a simple python program to class
 @author: jrr
 @author: rk
 """
-
 def classify_triangle(a_side,b_side,c_side):
     """
     Your correct code goes here...  Fix the faulty logic below until the code passes all of
@@ -24,11 +23,10 @@ def classify_triangle(a_side,b_side,c_side):
         If not a valid triangle, then return 'NotATriangle'
         If the sum of any two sides equals the squate of the third side, then return 'Right'
 
-      BEWARE: there may be a bug or two in this code
+    BEWARE: there may be a bug or two in this code
     """
-
     # require that the input values be >= 0 and <= 200
-    if a_side > 200 or b_side > 200 or c_side > 200:
+    if ((a_side > 200) or (b_side > 200) or (c_side > 200)):
         return 'InvalidInput'
 
     if a_side < 0 or b_side < 0 or c_side < 0: #Defect 1 Fixed
